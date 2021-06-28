@@ -3,12 +3,12 @@ package com.oceanbrasil.jornadaocean_banco_de_dados
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ListAdapter
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 
-class WordListAdapter : ListAdapter <Word,WordListAdapter.WordViewHolder>(WordsComparator()) {
+class WordListAdapter : ListAdapter<Word, WordListAdapter.WordViewHolder>(WordsComparator()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
         return WordViewHolder.create(parent)
@@ -16,7 +16,7 @@ class WordListAdapter : ListAdapter <Word,WordListAdapter.WordViewHolder>(WordsC
 
     override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
         val current = getItem(position)
-        holder.bind(current.word)
+        holder.bind(current.Word)
     }
 
     class WordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
