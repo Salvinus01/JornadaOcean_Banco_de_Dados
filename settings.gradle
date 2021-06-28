@@ -1,0 +1,2 @@
+rootProject.name = "JornadaOcean_Banco_de_Dados"
+include ':app'
